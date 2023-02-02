@@ -1,0 +1,39 @@
+*{
+    font-family: 'Unbounded', cursive;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.example
+{
+    opacity: 50%;
+}
+
+#currency
+{
+    font-weight: bold;
+    border-radius: 25px;
+    height: 30px;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#submitbtn
+{
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#result
+{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: auto;
+    border: 5px double;
+    width: 300px;
+    text-decoration-line: underline;
+}
