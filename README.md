@@ -1,5 +1,5 @@
 # Foreign Currency
 
-Foreign Currency Exchange Rates Website.. Simple and Clean
+#### Foreign Currency Exchange Rates Website.. Simple and Clean
 
- Type in any currency name in short form like *EUR, AED, JPY, GBP, SAR* and you will get its equivalent amount for **_1 USD_**
+#### Type in any currency name in short form like **_EUR, AED, JPY, GBP, SAR_** and you will get its current equivalent amount for **_1 USD_**
