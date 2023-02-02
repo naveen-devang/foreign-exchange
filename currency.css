@@ -16,6 +16,12 @@ body{
     padding: 30px;
 }
 
+.header h1
+{
+    text-align: center;
+    color: rgb(68, 255, 0);
+}
+
 .example
 {
     opacity: 50%;
@@ -35,7 +41,6 @@ body{
 #submitbtn
 {
     margin: 0 auto;
-    
     display: inline-block;
     border-radius: 4px;
     background-image: linear-gradient(to right, #CAEFD7 0%, #F5BFD7  50%, #ABC9E9  100%);
