@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  const currency_one = document.getElementById('from');
+  const amount = document.getElementById('amt');
+  const currency_two = document.getElementById('currency');
+
     document.querySelector("#fiat-currency").onsubmit = function() {
     {  
       var myHeaders = new Headers();
@@ -11,15 +15,19 @@ document.addEventListener('DOMContentLoaded', function() {
         headers: myHeaders
       };
 
-        fetch('https://api.apilayer.com/exchangerates_data/latest?base=USD', requestOptions)
+        const from = currency_one.value.toUpperCase();
+        const currency = currency_two.value.toUpperCase();
+        const amt = amount.value;
+
+        fetch(`https://api.apilayer.com/exchangerates_data/latest?symbols=${currency}&base=${from}`, requestOptions)
         
 
         .then(response => response.json())
         .then(data => {
-          const currency = document.querySelector('#currency').value.toUpperCase();
           const rate = data.rates[currency];
-          if (rate !== undefined) {
-            document.querySelector('#result').innerHTML = `1 USD is equal to ${rate.toFixed(3)} ${currency}.`; 
+          const final = rate*amt;
+          if (final !== undefined) {
+            document.querySelector('#result').innerHTML = `${amt} ${from} is equal to ${final.toFixed(3)} ${currency}.`; 
           } else
           {
             document.querySelector('#result').innerHTML = 'Invalid Currency.';
@@ -34,23 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
         
     }});
-    
-    $(document).ready(function(){
-
-      $("a").on('click', function(event) {
-    
-        if (this.hash !== "") {
-    
-          event.preventDefault();
-    
-          var hash = this.hash;
-    
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 2000, function(){
-            window.location.hash = hash;
-          });
-        } 
-      });
-    });
-    
+  

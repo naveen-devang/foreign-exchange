@@ -38,6 +38,28 @@ body{
     margin: 0 auto;
 }
 
+#amt
+{
+    font-weight: bold;
+    border-radius: 25px;
+    height: 30px;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#from
+{
+    font-weight: bold;
+    border-radius: 25px;
+    height: 30px;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
 #submitbtn
 {
     margin: 0 auto;
@@ -75,7 +97,7 @@ body{
     font-weight: bold;
     padding: 10px;
     margin: auto;
-    width: 300px;
+    width: 100%;
     text-decoration-line: underline;
 }
 
