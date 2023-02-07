@@ -3,29 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Currency Exchange</title>
-        <script src="currency.js"></script>
+        <script src="crypto.js"></script>
         <link rel="stylesheet" href="currency.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Unbounded&amp;display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="header">
-            <h1>Foreign Exchange</h1>
-            <br>
-            <h2><a href="crypto.html">For Crypto Exchange</a></h2>
+            <h1>Crypto Exchange</h1>
         </div>
         <center>
             <div class="heading">
                 <h1>Enter The Currency</h1>
             </div>
             <div class="example">
-                <p>eg: GBP, AED, JPY, EUR, SAR</p>
+                <p>eg: GBP, EUR, BTC, ETH</p>
             </div>
             <div class="forms">
-                <form id = "fiat-currency" autocomplete="off">
-                    <input id="amt" placeholder="Enter the amount" type="number">
+                <form id = "crypto-currency" autocomplete="off">
+                    <input id="amnt" placeholder="Enter the amount" type="number">
                     <input id="from" placeholder="From" type="text">
-                    <input id="currency" placeholder="To" type="text">
+                    <input id="to" placeholder="To" type="text">
                     <br>
                     
                     <input id="submitbtn" type="submit" value="Convert">
