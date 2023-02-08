@@ -22,15 +22,21 @@ body{
     color: rgb(68, 255, 0);
 }
 
-.header h2
-{
-    float: right;
-    color: aqua;
-}
-
 .example
 {
     opacity: 50%;
+}
+
+#aft
+{
+    box-sizing: border-box;
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    border-color: #0077f7;
+    border-width: 3px;
+    border-style: dashed;
+    height: 150px;
 }
 
 #currency
@@ -38,7 +44,7 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 500px;
+    width: 250px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -49,18 +55,7 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 500px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#amnt
-{
-    font-weight: bold;
-    border-radius: 25px;
-    height: 30px;
-    width: 500px;
+    width: 250px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -71,23 +66,11 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 500px;
+    width: 250px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
 }
-
-#to
-{
-    font-weight: bold;
-    border-radius: 25px;
-    height: 30px;
-    width: 500px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-
 
 #submitbtn
 {
@@ -110,7 +93,8 @@ body{
     margin: 10px;
     text-align: center;
     background-size: 200% auto;            
-    box-shadow: 0 0 20px #eee;
+    box-shadow: 5px 10px 20px #888888;
+    
 }
 
 #submitbtn:hover 
@@ -118,6 +102,7 @@ body{
    background-position: right center; /* change the direction of the change here */
    color: rgb(0, 0, 0);
    text-decoration: none;
+   box-shadow: 5px 10px 20px #5fb1f4;
 }
 
 #result

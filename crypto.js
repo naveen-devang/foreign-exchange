@@ -6,30 +6,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector("#crypto-currency").onsubmit = function() {
     {  
-      var options = {
-        "method": "GET",
-        "headers": {'X-CoinAPI-Key': '7C868E2B-4BC8-408B-998A-D5E0509B97CA'}
-      };
-
-      var request = https.request(options, function (response) {
-        var chunks = [];
-        response.on("data", function (chunk) {
-          chunks.push(chunk);
-        });
-      });
-
-      request.end();
+      const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '095753a516mshdef233fd49dca49p1495e2jsnb39acf8b0594',
+        'X-RapidAPI-Host': 'coinapi.p.rapidapi.com'
+      }
+    };
       
         const from = currency_one.value.toUpperCase();
         const to = currency_two.value.toUpperCase();
         const amnt = amount.value;
 
-        fetch(`https://rest.coinapi.io/v1/exchangerate/${from}/${to}`)
+        fetch(`https://coinapi.p.rapidapi.com/v1/exchangerate/${from}/${to}`, options)
         
 
         .then(response => response.json())
+        .then(response => console.log(response))
         .then(data => {
-          const rates = data.rate[to];
+          const rates = data.rate;
           const final = rates*amnt;
           if (final !== undefined) {
             document.querySelector('#result').innerHTML = `${amnt} ${from} is equal to ${final.toFixed(3)} ${to}.`; 
@@ -41,10 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.log('Error', error);
-        });
+        })
+
       
       return false;
       }
         
     }});
+    
   
