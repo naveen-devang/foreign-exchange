@@ -7,7 +7,59 @@
 
 body{
     margin: 0;
+    background-color: white;
+    color: black;
+    transition: background 0.2s linear;
 }
+
+body.dark
+{
+    background-color: #15202B;
+    color: #ffffff;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    width: 50px;
+    height: 26px;
+    background-color:#111;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+  }
+  
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  /*  target the elemenent after the label*/
+  .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: pink;
+  }
+  
+  .fa-sun {
+    color: yellow;
+  }
+
 
 .header
 {
@@ -31,7 +83,7 @@ body{
 {
     box-sizing: border-box;
     display: block;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
     border-color: #0077f7;
     height: 150px;
@@ -42,7 +94,7 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 250px;
+    width: 500px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -53,7 +105,7 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 250px;
+    width: 500px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -64,7 +116,7 @@ body{
     font-weight: bold;
     border-radius: 25px;
     height: 30px;
-    width: 250px;
+    width: 500px;
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -114,22 +166,22 @@ body{
     text-decoration-line: underline;
 }
 
-@media screen and (max-width: 759.20px) {
+@media screen and (max-width: 50%) {
     #amt
     {
-      flex-direction: column;
+      width: 200px;
     }
     #from
     {
-        flex-direction: column;
+        width: 200px;
     }
     #currency
     {
-        flex-direction: column;
+        width: 200px;
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 608px) {
     #amt, #from, #currency
     {
         width: 100%;

@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+  const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', ()=>{
+  document.body.classList.toggle('dark');
+})
+
   const currency_one = document.getElementById('from');
   const amount = document.getElementById('amt');
   const currency_two = document.getElementById('currency');
@@ -42,4 +47,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
         
     }});
-  
+
+    
